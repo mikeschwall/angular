@@ -1,10 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CourseService } from './course.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'sept12';
+export class AppComponent implements OnInit {
+
+  mydata;
+
+  constructor(private courseService:CourseService) {
+
+  }
+
+  ngOnInit() {
+
+  }
+
+  onClick(test) {
+    console.log(test);
+   
+  }
+
 }
