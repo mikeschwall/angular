@@ -2,15 +2,37 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { InitComponent } from './init/init.component';
+import { AlertComponent } from './alert/alert.component';
+import { OneComponent } from './one/one.component';
+import { TwoComponent } from './two/two.component';
+import { ThreeComponent } from './three/three.component';
+import { PlaceholderDirective } from './placeholder.directive';
+import { CourseService } from './course.service';
+import {Routes,RouterModule} from '@angular/router';
+
+const routes:Routes = [
+  {path:"", component:OneComponent},
+  {path:"two/:id", component:TwoComponent},
+  {path:"three", component:ThreeComponent}
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InitComponent,
+    AlertComponent,
+    OneComponent,
+    TwoComponent,
+    ThreeComponent,
+    PlaceholderDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CourseService],
+  bootstrap: [AppComponent],
+  entryComponents:[AlertComponent]
 })
 export class AppModule { }
