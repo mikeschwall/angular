@@ -1,0 +1,8 @@
+<form [formGroup]="mygroup" (ngSubmit)="onClick()">
+  food <input type="text" formControlName="food" /><br/>
+  <button type="submit">send</button>
+</form><br/>
+
+<div *ngFor="let test of mydata">
+  {{test}}
+</div>
