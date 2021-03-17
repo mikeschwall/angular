@@ -1,0 +1,7 @@
+<p>
+  one works!
+</p>
+<input type="text" ngModel name="mike" #mike="ngModel"/><br/>
+<div *ngFor="let test of mydata | mypipe:mike.value">
+  {{test.title}}
+</div>
