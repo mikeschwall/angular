@@ -1,0 +1,25 @@
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+@Component({
+  selector: 'three',
+  templateUrl: './three.component.html',
+  styleUrls: ['./three.component.css']
+})
+export class ThreeComponent implements OnInit {
+
+  mydata;
+
+  @Input() myinput = false;
+  @Output() myoutput = new EventEmitter<boolean>();
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+  onClick() {
+    this.myinput = !this.myinput;
+    this.myoutput.emit(this.myinput);
+  }
+
+}
