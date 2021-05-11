@@ -1,0 +1,12 @@
+<p>
+  two works!
+</p>
+
+<form [formGroup]="mygroup" (ngSubmit)="onClick()">
+  food <input type="text" formControlName="food" autogrow/><br/>
+  <button type="submit">add data</button>
+</form><br/><br/>
+
+<div *ngFor="let test of mike">
+  {{test}}
+</div>
