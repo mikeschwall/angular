@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { CourseService } from './course.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sept12';
+
+  mydata;
+
+  constructor(private courseService:CourseService) {}
+
+
+  onClick(test) {
+    console.log(test);
+  }
 }
