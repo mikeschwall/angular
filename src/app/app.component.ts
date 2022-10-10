@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CourseService } from './todo/course.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular';
+  mydata:any;
+
+  constructor(private courseService:CourseService) {}
+
+  getData(test:any) {
+    this.courseService.getPerson(test).subscribe(item => this.mydata = item);
+  }
+
+  getdata(test:any) {
+    console.log(test);
+  }
+
 }
