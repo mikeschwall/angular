@@ -1,0 +1,9 @@
+<p>one works!</p>
+
+<form (ngSubmit)="onClick()">
+    <input type="text" ngModel #mike="ngModel" name="mike" />
+</form>
+
+<div *ngFor="let test of mydata | mypipe:mike.value">
+    {{test.title}}
+</div>
