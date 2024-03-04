@@ -1,0 +1,7 @@
+<p>one works!</p>
+
+<div *ngFor="let test of mydata; let i = index">
+    <a href="javscript:void(0)" (click)="onClick(i)">
+        {{test.name}}
+    </a>
+</div>
