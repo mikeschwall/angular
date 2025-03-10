@@ -20,6 +20,12 @@ import { ThreeComponent } from './three/three.component';
   imports: [
     CommonModule,
     TodoRoutingModule
+  ],
+  exports:[
+    InitComponent,
+    OneComponent,
+    TwoComponent,
+    ThreeComponent
   ]
 })
 export class TodoModule { }
