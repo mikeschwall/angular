@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CoursesService, Employee } from './todo/course.service';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +6,9 @@ import { CoursesService, Employee } from './todo/course.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  mydata?:Employee;
+  
 
-  constructor(private courseService:CoursesService) {}
+  constructor() {}
 
-  getdata(test:number) {
-    this.courseService.getEmployee(test).subscribe(item => this.mydata = item);
-  }
-
-  final(test:boolean) {
-    console.log(test);
-  }
-
-
+  
 }
