@@ -1,6 +1,0 @@
-<p>one works!</p>
-
-<input type="text" ngModel #myfilter="ngModel" name="myfilter" /><br/>
-<div *ngFor="let test of mydata | mypipe:myfilter.value">
-    {{test.title}}
-</div>
