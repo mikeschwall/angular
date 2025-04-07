@@ -1,24 +1,15 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { CourseService, Employee } from '../foodservice';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'one',
+  selector: 'app-one',
   templateUrl: './one.component.html',
   styleUrls: ['./one.component.css']
 })
 export class OneComponent implements OnInit {
 
-  mydata:Employee[] = [];
-  @Output() myoutput = new EventEmitter<number>();
-
-  constructor(private courseService:CourseService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.courseService.getdata().subscribe(item => this.mydata = item);
-  }
-
-  onClick(id:number) {
-    this.myoutput.emit(id);
   }
 
 }

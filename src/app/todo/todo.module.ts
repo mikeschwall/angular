@@ -7,7 +7,6 @@ import { InitComponent } from './init/init.component';
 import { OneComponent } from './one/one.component';
 import { TwoComponent } from './two/two.component';
 import { ThreeComponent } from './three/three.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,15 +19,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     CommonModule,
-    TodoRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    TodoRoutingModule
   ],
   exports:[
-    InitComponent,
-    OneComponent,
-    TwoComponent,
-    ThreeComponent
+    InitComponent
   ]
 })
 export class TodoModule { }

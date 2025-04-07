@@ -1,20 +1,15 @@
-import { Component, OnInit, ViewContainerRef } from '@angular/core';
-import { AlertComponent } from '../alert/alert.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'init',
+  selector: 'app-init',
   templateUrl: './init.component.html',
   styleUrls: ['./init.component.css']
 })
 export class InitComponent implements OnInit {
 
-  constructor(private viewContainerRef:ViewContainerRef) { }
+  constructor() { }
 
   ngOnInit(): void {
-  }
-
-  onClick() {
-    this.viewContainerRef.createComponent(AlertComponent);
   }
 
 }
